@@ -13,6 +13,7 @@ public class BankShotPanel extends JPanel {
     // Instance Variables
     private BankShotModel model;
     private BankShotView view;
+
     /**
      * Initialize model and view
      * @param model the model of BankShot
@@ -21,7 +22,6 @@ public class BankShotPanel extends JPanel {
     public BankShotPanel(BankShotModel model, BankShotView view) {
         this.model = model;
         this.view = view;
-        
         // allow JPanel to listen to Keyboard
         this.setFocusable(true);
     }
@@ -32,12 +32,20 @@ public class BankShotPanel extends JPanel {
      */
     public void paintComponent(Graphics g) {
     	super.paintComponent(g);
-        //Draws Shooter
+
+        // Draws the Shooter
         g.setColor(model.getShooter().getShooterColor());
         g.fillOval(model.getShooter().getPositionX(), model.getShooter().getPositionY(), 
                 model.getShooter().getSize(), model.getShooter().getSize());
-        g.fillRect(model.getShooter().getPositionX() + 10, 
-                model.getShooter().getPositionY() - (model.getShooter().getGunSize() - 1),
-                2, model.getShooter().getGunSize());
-    }
+        
+        // Draws the Shooters' Gun
+//        g.drawLine(model.getShooter().getPositionX() + 10, 
+//                model.getShooter().getPositionY() - (model.getShooter().getGunSize() - 1),
+//                2, model.getShooter().getGunSize());
+
+        // Draws the Target         
+        g.setColor(model.getTarget().getTargetColor());
+        g.fillOval(model.getTarget().getTargetPositionX(), model.getTarget().getTargetPositionY(),
+                model.getTarget().getTargetSize(), model.getTarget().getTargetSize());
+    } // end of paintComponent method
 } // end of BankShotPanel class

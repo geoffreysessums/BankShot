@@ -12,14 +12,16 @@ public class BankShotModel {
     private int height;
 
     private ShooterModel shooter;
+    private TargetModel target;
 
     /**
      * Constructor
      */
     public BankShotModel() {
-        width = 475;
+        width = 500;
         height = 500;
         shooter = new ShooterModel(this);
+        target = new TargetModel(this);
     }
 
     /**
@@ -40,9 +42,17 @@ public class BankShotModel {
 
     /**
      * Get the shooter
-     * @return shooer
+     * @return shooter
      */
     public ShooterModel getShooter() {
         return shooter;
+    }
+    
+    /**
+     * Get the target
+     * @return target
+     */
+    public TargetModel getTarget() {
+    	return target;
     }
 } // end of BankShotModel class
