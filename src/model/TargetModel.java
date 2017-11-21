@@ -12,7 +12,7 @@ public class TargetModel {
     private static final Color TARGET_HIT_COLOR = Color.BLACK;
     private static final Color BACKGROUND_COLOR = Color.DARK_GRAY;
     private static final int TARGET_SIZE = 20;
-    private static final int TARGET_POSITION_Y = 50;
+    private static final int TARGET_POSITION_Y = 40;
     private final int TARGET_DELTA_X = 4;
     private int targetPositionX;
     private int targetDeltaX;
@@ -26,7 +26,7 @@ public class TargetModel {
      */
     public TargetModel(BankShotModel model) {
     	this.model = model;
-    	this.targetPositionX = (model.getWidth() - TARGET_SIZE) / 2;
+    	this.targetPositionX = model.getWidth() / 2;
     	this.count = 3;
         this.targetColor = Color.CYAN;
     }

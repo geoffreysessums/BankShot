@@ -35,17 +35,17 @@ public class BankShotPanel extends JPanel {
 
         // Draws the Shooter
         g.setColor(model.getShooter().getShooterColor());
-        g.fillOval(model.getShooter().getPositionX(), model.getShooter().getPositionY(), 
+        g.fillOval(model.getShooter().getPositionX() - model.getShooter().getSize() / 2, 
+        		model.getShooter().getPositionY() - model.getShooter().getSize() / 2, 
                 model.getShooter().getSize(), model.getShooter().getSize());
+        // Draws the Shooters' gun
+        g.drawLine(model.getShooter().getGunX1(), model.getShooter().getGunY1(),
+        		model.getShooter().getGunX2(), model.getShooter().getGunY2());
         
-        // Draws the Shooters' Gun
-//        g.drawLine(model.getShooter().getPositionX() + 10, 
-//                model.getShooter().getPositionY() - (model.getShooter().getGunSize() - 1),
-//                2, model.getShooter().getGunSize());
-
         // Draws the Target         
         g.setColor(model.getTarget().getTargetColor());
-        g.fillOval(model.getTarget().getTargetPositionX(), model.getTarget().getTargetPositionY(),
+        g.fillOval(model.getTarget().getTargetPositionX() - model.getTarget().getTargetSize() / 2,
+        		model.getTarget().getTargetPositionY() - model.getTarget().getTargetSize() / 2,
                 model.getTarget().getTargetSize(), model.getTarget().getTargetSize());
     } // end of paintComponent method
 } // end of BankShotPanel class
