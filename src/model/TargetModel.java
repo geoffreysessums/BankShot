@@ -91,10 +91,12 @@ public class TargetModel {
         //paintTarget(g, BACKGROUND_COLOR);
         //paintShield(g, BACKGROUND_COLOR);
         targetPositionX += targetDeltaX;
-        if (targetPositionX + TARGET_SIZE/2 > model.getWidth())
+        // Limit Target movement to playable area taking the shield into account
+        if (model.getTarget().getTargetPositionX() + model.getTarget().getTargetSize() > model.getWidth())
           targetDeltaX = -TARGET_DELTA_X;
-        if (targetPositionX - TARGET_SIZE/2 < 0)
+        if (model.getTarget().getTargetPositionX() - model.getTarget().getTargetSize() < 0)
           targetDeltaX = TARGET_DELTA_X;
+        // Provides randomize movement for Target
         double randomMove = RANDOM.nextDouble();
         if (randomMove > .98)
           targetDeltaX = TARGET_DELTA_X;

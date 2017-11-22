@@ -18,7 +18,8 @@ public class  BankShot {
         // Create new model, view, and controller
         BankShotModel model = new BankShotModel();
         BankShotView view = new BankShotView(model);
-        BankShotRepaintController repaintController = new BankShotRepaintController(view);
+        BankShotRepaintController repaintController = 
+        		new BankShotRepaintController(model, view);
 
         // Repaint timer so that the window will update
         new Timer(25, repaintController).start();
