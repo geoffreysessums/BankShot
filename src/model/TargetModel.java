@@ -5,20 +5,26 @@ import java.awt.Color.*;
 import java.util.Random;
 
 public class TargetModel {
-    // Class Fields
+    // Target Values 
     private BankShotModel model;
-    private static final Random RANDOM = new Random();
+    private final Random RANDOM = new Random();
     private Color targetColor;
-    private static final Color TARGET_HIT_COLOR = Color.BLACK;
-    private static final Color BACKGROUND_COLOR = Color.DARK_GRAY;
-    private static final int TARGET_SIZE = 20;
-    private static final int TARGET_POSITION_Y = 40;
+    private final Color TARGET_HIT_COLOR = Color.BLACK;
+    private final Color BACKGROUND_COLOR = Color.DARK_GRAY;
+    private final int TARGET_SIZE = 20;
+    private final int TARGET_POSITION_Y = 40;
     private final int TARGET_DELTA_X = 4;
     private int targetPositionX;
     private int targetDeltaX;
     private boolean targetMovement = true;
     private int targetHitTimer; // target hit recently if greater than 0
     private int count; 
+    
+    // Shield Values
+    private final Color SHIELD_HIT_COLOR = Color.BLACK;
+    private final Color SHIELD_COLOR = Color.CYAN;
+    private boolean shieldActive = true;
+    private int shieldHitTimer; // shield hit recently if greater than 0
 
     /**
      * Constructor

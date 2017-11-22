@@ -47,5 +47,10 @@ public class BankShotPanel extends JPanel {
         g.fillOval(model.getTarget().getTargetPositionX() - model.getTarget().getTargetSize() / 2,
         		model.getTarget().getTargetPositionY() - model.getTarget().getTargetSize() / 2,
                 model.getTarget().getTargetSize(), model.getTarget().getTargetSize());
+        // Draws the Targets' shield
+        g.drawLine(model.getTarget().getTargetPositionX() - model.getTarget().getTargetSize(),
+        		model.getTarget().getTargetPositionY() + model.getTarget().getTargetSize(),
+        		model.getTarget().getTargetPositionX() + model.getTarget().getTargetSize(),
+        		model.getTarget().getTargetPositionY() + model.getTarget().getTargetSize());
     } // end of paintComponent method
 } // end of BankShotPanel class
