@@ -13,7 +13,7 @@ public class TargetModel {
     private final Color BACKGROUND_COLOR = Color.DARK_GRAY;
     private final int TARGET_SIZE = 20;
     private final int TARGET_POSITION_Y = 40;
-    private final int TARGET_DELTA_X = 4;
+    private final int TARGET_DELTA_X = 5;
     private int targetPositionX;
     private int targetDeltaX;
     private boolean targetMovement = true;
@@ -88,8 +88,6 @@ public class TargetModel {
           return;
         if (targetHitTimer > 0)
           return;
-        //paintTarget(g, BACKGROUND_COLOR);
-        //paintShield(g, BACKGROUND_COLOR);
         targetPositionX += targetDeltaX;
         // Limit Target movement to playable area taking the shield into account
         if (model.getTarget().getTargetPositionX() + model.getTarget().getTargetSize() > model.getWidth())
@@ -105,4 +103,4 @@ public class TargetModel {
         else if (randomMove > .94)
           targetDeltaX = 0;
     }    
-}
+} // end of TargetModel class

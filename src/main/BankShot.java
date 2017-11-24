@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.Timer;
 import model.BankShotModel;
 import view.BankShotView;
+import controller.BankShotKeyboardController;
 import controller.BankShotRepaintController;
 
 /**
@@ -20,10 +21,13 @@ public class  BankShot {
         BankShotView view = new BankShotView(model);
         BankShotRepaintController repaintController = 
         		new BankShotRepaintController(model, view);
+        BankShotKeyboardController keyboardController =
+        		new BankShotKeyboardController(model, view);
 
         // Repaint timer so that the window will update
         new Timer(25, repaintController).start();
-
+         
+        view.registerListeners(keyboardController);
         // Display
         view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         view.setSize(500, 500);

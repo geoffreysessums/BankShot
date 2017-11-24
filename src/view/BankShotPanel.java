@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import model.*;
 import view.BankShotView;
+import controller.*;
 
 /**
  * This along BankShotView implements the view of BankShot

@@ -12,6 +12,8 @@ public class ShooterModel {
 	private BankShotModel model;
     private static final int SHOOTER_SIZE = 20; // Shooter diameter
     private static final int GUN_SIZE = 10; // Gun length
+    private final int SHOOTER_DELTA_X = 10;
+    private int shooterDeltaX;    
     private double gunAngle;
     private int shooterPositionX;
     private int shooterPositionY;
@@ -140,4 +142,26 @@ public class ShooterModel {
 	public int getGunY2() {
 		return shooterPositionY - (int)Math.round(triangleY(gunAngle,SHOOTER_SIZE/2 + GUN_SIZE));
 	}
+
+	/**
+	 * Move the shooter right.
+	 */
+    public void moveShooterRight() {
+    	shooterDeltaX = SHOOTER_DELTA_X;
+    	if (shooterPositionX + SHOOTER_SIZE/2 >= model.getWidth())
+    		shooterPositionX = model.getWidth() - SHOOTER_SIZE/2;
+    	else
+			shooterPositionX += shooterDeltaX;
+    }
+
+    /**
+     * Move the shooter left.
+     */
+    public void moveShooterLeft() {
+    	shooterDeltaX = -SHOOTER_DELTA_X;
+    	if (shooterPositionX - SHOOTER_SIZE/2 <= 0)
+    		shooterPositionX = SHOOTER_SIZE/2;
+    	else
+          shooterPositionX += shooterDeltaX;
+    }
 } // end of ShooterModel class

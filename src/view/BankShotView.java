@@ -1,9 +1,11 @@
 package view;
 
 import java.awt.*;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.event.KeyListener;
 
+import javax.swing.*;
+
+import controller.BankShotKeyboardController;
 import model.BankShotModel;
 
 /**
@@ -30,5 +32,16 @@ public class BankShotView extends JFrame {
 		bankShotPanel.setBackground(Color.DARK_GRAY);
 //		Dimension size = bankShotPanel.getSize();
 //		model.setSize(size.width, size.height);
+		
+		// so panel can listen to keboard
+		bankShotPanel.requestFocus();
+	}
+    
+	/**
+	 * Register event handlers with the appropriate components.
+	 * @param keyboardController a BankShot keyboard controller
+	 */
+	public void registerListeners(BankShotKeyboardController keyboardController) {	
+		bankShotPanel.addKeyListener(keyboardController);
 	}
 } // end of BankShotView class
