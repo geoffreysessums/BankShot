@@ -136,7 +136,7 @@ public class ShooterModel {
 	}
 
 	/**
-	 * Get y2value for shooter gun
+	 * Get y2 value for shooter gun
 	 * @return y2gun value
 	 */
 	public int getGunY2() {

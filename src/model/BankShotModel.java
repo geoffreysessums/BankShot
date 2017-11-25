@@ -13,6 +13,8 @@ public class BankShotModel {
 
     private ShooterModel shooter;
     private TargetModel target;
+    
+    private boolean pause;
 
     /**
      * Constructor
@@ -22,6 +24,7 @@ public class BankShotModel {
         height = 500;
         shooter = new ShooterModel(this);
         target = new TargetModel(this);
+        pause = false;
     }
 
     /**
@@ -54,5 +57,21 @@ public class BankShotModel {
      */
     public TargetModel getTarget() {
     	return target;
+    }
+    
+    /**
+     * Get pause status
+     * @return pause the pause status of the game.
+     */
+    public boolean getPause() {
+    	return pause;
+    }
+    
+    /**
+     * Pause the game
+     * @param pause
+     */
+    public void setPause(boolean pause) {
+    	this.pause = pause;
     }
 } // end of BankShotModel class

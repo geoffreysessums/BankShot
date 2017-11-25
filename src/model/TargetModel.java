@@ -90,9 +90,9 @@ public class TargetModel {
           return;
         targetPositionX += targetDeltaX;
         // Limit Target movement to playable area taking the shield into account
-        if (model.getTarget().getTargetPositionX() + model.getTarget().getTargetSize() > model.getWidth())
+        if (targetPositionX + TARGET_SIZE > model.getWidth())
           targetDeltaX = -TARGET_DELTA_X;
-        if (model.getTarget().getTargetPositionX() - model.getTarget().getTargetSize() < 0)
+        if (targetPositionX - TARGET_SIZE < 0)
           targetDeltaX = TARGET_DELTA_X;
         // Provides randomize movement for Target
         double randomMove = RANDOM.nextDouble();
