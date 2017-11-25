@@ -29,7 +29,7 @@ public class ShooterModel {
 	public ShooterModel(BankShotModel model) {
     	this.model = model;
         this.shooterPositionX = model.getWidth() / 2;
-        this.shooterPositionY = model.getHeight() - 3 * SHOOTER_SIZE;
+        this.shooterPositionY = model.getHeight() - 5 * SHOOTER_SIZE;
         this.shooterColor = Color.RED;      
         this.gunAngle = 0;
     }

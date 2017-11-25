@@ -18,7 +18,7 @@ import model.BankShotModel;
 public class BankShotView extends JFrame {
 	private BankShotModel model;
 	private BankShotPanel bankShotPanel;
-	//private JLabel statusBar;
+	private JLabel statusBar;
 	private JMenu bankShotMenu;
 	private JPopupMenu popupMenu;
 
@@ -59,7 +59,15 @@ public class BankShotView extends JFrame {
 		bankShotPanel.setBackground(Color.DARK_GRAY);
 //		Dimension size = bankShotPanel.getSize();
 //		model.setSize(size.width, size.height);
-		
+
+        /*
+         * SOUTH: A status bar for telling us what happens.
+         */
+        statusBar = new JLabel("The status bar is open.");
+        statusBar.setBackground(Color.MAGENTA);
+        statusBar.setOpaque(true); // need this for setBackground to work
+        add(statusBar, BorderLayout.SOUTH);		
+
 		// so panel can listen to keyboard
 		bankShotPanel.requestFocus();
 	}
@@ -96,12 +104,19 @@ public class BankShotView extends JFrame {
 
     /**
      * Show popup if right click
-     * 
      * @param event
      */
     public void checkForTriggerEvent(MouseEvent event) {
         if (event.isPopupTrigger()) {
             popupMenu.show(event.getComponent(), event.getX(), event.getY());
         }
+    }
+
+    /**
+     * Set the text in the status bar.
+     * @param text
+     */
+    public void setStatus(String text) {
+        statusBar.setText(text);
     }
 } // end of BankShotView class
