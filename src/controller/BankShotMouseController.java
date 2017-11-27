@@ -59,10 +59,12 @@ public class BankShotMouseController implements MouseListener, MouseMotionListen
 	}
 
 	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	/**
+	 * clear status bar
+	 */
+	public void mouseEntered(MouseEvent event) {
+		view.setStatus("");
+	} // end method mouseEntered
 
 	@Override
 	public void mouseExited(MouseEvent e) {

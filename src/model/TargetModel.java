@@ -84,6 +84,10 @@ public class TargetModel {
     // reset targetDeltaX with probability .06.
     // If changed, it is changed to 0, TARGET_DELTA_X, or -TARGET_DELTA_X with equal probability
     public void moveTarget() {
+        // Don't do anything if the game is paused.
+        if (model.getPause()) {
+            return;
+        }
         if (!targetMovement)
           return;
         if (targetHitTimer > 0)

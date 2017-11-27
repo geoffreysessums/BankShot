@@ -147,6 +147,10 @@ public class ShooterModel {
 	 * Move the shooter right.
 	 */
     public void moveShooterRight() {
+        // Don't do anything if the game is paused.
+        if (model.getPause()) {
+            return;
+        }
     	shooterDeltaX = SHOOTER_DELTA_X;
     	if (shooterPositionX + SHOOTER_SIZE/2 >= model.getWidth())
     		shooterPositionX = model.getWidth() - SHOOTER_SIZE/2;
@@ -158,6 +162,10 @@ public class ShooterModel {
      * Move the shooter left.
      */
     public void moveShooterLeft() {
+        // Don't do anything if the game is paused.
+        if (model.getPause()) {
+            return;
+        }
     	shooterDeltaX = -SHOOTER_DELTA_X;
     	if (shooterPositionX - SHOOTER_SIZE/2 <= 0)
     		shooterPositionX = SHOOTER_SIZE/2;
