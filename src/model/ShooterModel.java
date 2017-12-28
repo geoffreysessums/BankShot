@@ -12,9 +12,10 @@ public class ShooterModel {
 	private BankShotModel model;
     private static final int SHOOTER_SIZE = 20; // Shooter diameter
     private static final int GUN_SIZE = 10; // Gun length
+    private static final double gunDelta = 4; // in degrees
     private final int SHOOTER_DELTA_X = 10;
     private int shooterDeltaX;    
-    private double gunAngle;
+    private double gunAngle; // in degrees
     private int shooterPositionX;
     private int shooterPositionY;
     private int gunx1;
@@ -35,7 +36,7 @@ public class ShooterModel {
     }
 
 	/**
-	 * 
+	 * Set the horizontal position of the shooter.
 	 * @param shooterPositionX
 	 */
 	public void setShooterPositionX(int shooterPositionX) {
@@ -43,12 +44,13 @@ public class ShooterModel {
 	}
 	
 	/**
-	 * 
+	 * Set the vertical position of the shooter.
 	 * @param shooterPositionY
 	 */
 	public void setShooterPositionY(int shooterPositionY){
 		this.shooterPositionY = shooterPositionY;
 	}
+
 	/**
 	 * Get the shooter color.
 	 * @return shooterColor (Red)
@@ -171,5 +173,35 @@ public class ShooterModel {
     		shooterPositionX = SHOOTER_SIZE/2;
     	else
           shooterPositionX += shooterDeltaX;
+    }
+    
+    /**
+     * Change the gun angle.
+     */
+    public void moveGunLeft() {
+        // Don't do anything if the game is paused.
+        if (model.getPause()) {
+            return;
+        }
+        // move gun left
+        gunAngle -= gunDelta;
+        if (gunAngle < -28) {
+          gunAngle = -28;
+        }
+    }
+
+    /**
+     * Change the gun angle.
+     */
+    public void moveGunRight() {
+        // Don't do anything if the game is paused.
+        if (model.getPause()) {
+            return;
+        }
+        // move gun right
+        gunAngle += gunDelta;
+        if (gunAngle > 28) {
+          gunAngle = 28;
+        }
     }
 } // end of ShooterModel class

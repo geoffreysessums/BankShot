@@ -30,17 +30,30 @@ public class BankShotKeyboardController extends KeyAdapter {
     public void keyTyped(KeyEvent event) {
     	char keyChar = event.getKeyChar();
     	int keyCode = event.getKeyCode();
+    	// exits game
     	if (keyChar  == 'e' || keyChar == 'E') {
     		view.dispose();
     		System.exit(0);
+    	// moves shooter left
     	} else if (keyCode == KeyEvent.VK_LEFT || keyChar  == 'a') {
     		model.getShooter().moveShooterLeft();
     		view.revalidate();
     		view.repaint();
-    	} else if (keyCode == KeyEvent.VK_RIGHT || keyChar  == 'd') {
+        // moves shooter right
+    	} else if (keyCode == KeyEvent.VK_RIGHT || keyChar  == 'f') {
     		model.getShooter().moveShooterRight();
     		view.revalidate();
     		view.repaint();
+    	// moves gun left
+    	} else if (keyChar == 's') {
+    		model.getShooter().moveGunLeft();
+    		view.revalidate();
+    		view.repaint();
+    	// moves gun right 
+    	} else if (keyChar == 'd') {
+    		model.getShooter().moveGunRight();
+    		view.revalidate();
+    		view.repaint();	
     	}
     }
 } // end of BankShotKeyboardController class
