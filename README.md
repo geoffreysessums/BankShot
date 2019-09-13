@@ -29,7 +29,7 @@ Author: Geoffrey Sessums
 ## License
 MIT License
 
-Copyright (c) 2017 Geoffrey Sessums, Grant Bryant, Ziyi Yu, Stefan Marchand, Nick Gonzales
+Copyright (c) 2017 Geoffrey Sessums
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
