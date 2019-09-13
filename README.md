@@ -1,22 +1,35 @@
-# Project: BankShot
-#### Description
+# BankShot
+
+Geoffrey Sessums
+CS 3443 Application Programming - Spring 2017
+Language: Java
+
+## Description
+
 Written in Java, BankShot is an old-style video game where the player must hit 
 a target by disabling its shields and bouncing missiles off the sides of the 
 screen to destroy the target.
 
+## What I learned
+
+* How to use Git for version control
+* How to use the Unified Modeling Language (UML) for software design
+* How to use the Model, View, Controller (MVC) design pattern to modularize the user interface, logic, and models
+* How to use Java Swing to create the graphical user interface (GUI)
+* How to use Java Collections
+* How to use the Eclipse IDE
+
 ## Installation
-Clone the repository wherever you like (e.g. `~/Projects/BankShot`):
-```bash
-git clone https://github.com/gsessums/BankShot.git
-```
+Clone the repository wherever you like (e.g. `~/Desktop/BankShot`):
+`git clone https://github.com/gsessums/BankShot.git`
 
 ## Credits
-Author:[Geoffrey Sessums](http://www.geoffreysessums.com)
+Author: Geoffrey Sessums
 
 ## License
 MIT License
 
-Copyright (c) 2017 Geoffrey Sessums 
+Copyright (c) 2017 Geoffrey Sessums, Grant Bryant, Ziyi Yu, Stefan Marchand, Nick Gonzales
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
