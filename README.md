@@ -1,8 +1,8 @@
 # BankShot
 
-Geoffrey Sessums
-CS 3443 Application Programming - Spring 2017
-Language: Java
+Geoffrey Sessums  
+CS 3443 Application Programming - Spring 2017  
+Language: Java  
 
 ## Description
 
