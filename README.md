@@ -20,7 +20,7 @@ screen to destroy the target.
 * How to use the Eclipse IDE
 
 ## Installation
-Clone the repository wherever you like (e.g. `~/Desktop/BankShot`):
+Clone the repository wherever you like (e.g. `~/Desktop/BankShot`):  
 `git clone https://github.com/gsessums/BankShot.git`
 
 ## Credits
