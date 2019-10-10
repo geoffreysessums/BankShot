@@ -21,7 +21,7 @@ screen to destroy the target.
 
 ## Installation
 Clone the repository wherever you like (e.g. `~/Desktop/BankShot`):  
-`git clone https://github.com/gsessums/BankShot.git`
+`git clone https://github.com/geoffreysessums/BankShot.git`
 
 ## Credits
 Author: Geoffrey Sessums
